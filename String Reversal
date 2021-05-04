@@ -27,6 +27,22 @@ string reverseString(string s)
     return removeSpaces(Str);
 }
 
+________________________________OR_______________________________
+
+
+string reverseString(string s)
+{
+    string Str="";
+    int n = s.size(), count=0;
+    for(int i=n-1;i>=0;i--){
+        if(Str.find(s[i])!= string::npos)
+            continue;
+        if(s[i]==' ') continue;
+        else
+            Str=Str+s[i];
+    }
+    return Str;
+}
 
 
 
