@@ -1,0 +1,33 @@
+PROBLEM: Given a string, say S, print it in reverse manner eliminating the repeated characters and spaces.
+
+
+Input: S = "GEEKS FOR GEEKS"
+Output: "SKEGROF"
+
+
+
+SOLUTION:
+
+string removeSpaces(string Str)    //Remove the spaces in the string
+{
+    Str.erase(remove(Str.begin(), Str.end(), ' '), Str.end());
+    return Str;
+}
+
+string reverseString(string s)
+{
+    string Str="";
+    int n = s.size(), count=0;
+    for(int i=n-1;i>=0;i--){
+        if(Str.find(s[i])!= string::npos)
+            continue;
+        else
+            Str=Str+s[i];
+    }
+    return removeSpaces(Str);
+}
+
+
+
+
+
